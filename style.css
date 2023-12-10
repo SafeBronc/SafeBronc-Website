@@ -1,0 +1,124 @@
+/*
+style.css
+SafeBronc-Website
+Owen Matejka
+12/10/2023
+*/
+
+/* Reset -- Tailwind Font Stack */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #800000);
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Sit Text Above Overlay */
+.main-content {
+    z-index: 1;
+}
+
+/* Overlay */
+.background-overlay {
+    position: absolute;
+    inset: 0;
+    background: black;
+    opacity: 0.15;
+    backdrop-filter: blur(10px);
+}
+
+/* Header and Footer */
+header {
+    padding: .5rem;
+}
+
+footer p {
+    font-size: 1rem;
+    padding-left: .5rem;
+}
+
+.header-container, .footer-container, .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: #800000;
+}
+
+.logo-icon {
+    margin-right: 0.5rem;
+    color: #800000;
+}
+
+/* Center */
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* TODO: Info Signup Form */
+button {
+    background-color: white;
+    color: #800000;
+    border: none;
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Adjust Spacing For Mobile */
+@media (max-width: 768px) {
+    .main-content, .header-container, .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer p {
+        padding-left: 0rem;
+    }
+}
